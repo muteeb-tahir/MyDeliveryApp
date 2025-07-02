@@ -1,0 +1,131 @@
+.footer {
+  padding: 60px 10vw 30px;
+  background: #f7f7f7;
+  color: #333;
+  font-family: 'Inter', sans-serif;
+  border-top: 1px solid #ccc;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 60px;
+  align-items: start;
+}
+
+.footer-logo-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.footer-logo {
+  max-width: 160px;
+}
+
+.footer-description {
+  max-width: 400px;
+  color: #555;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.footer-icons img {
+  width: 32px;
+  margin-right: 12px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.footer-icons img:hover {
+  transform: scale(1.1);
+}
+
+.footer-links,
+.footer-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.footer-links h3,
+.footer-contact h3 {
+  font-size: 1.2rem;
+  color: #111;
+}
+
+.footer-links ul,
+.footer-contact ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li,
+.footer-contact li {
+  font-size: 0.95rem;
+  color: #555;
+  cursor: pointer;
+  margin-bottom: 8px;
+  transition: color 0.2s;
+}
+
+.footer-links li:hover,
+.footer-contact li:hover {
+  color: #000;
+}
+
+.footer hr {
+  margin: 30px 0;
+  border: none;
+  height: 1px;
+  background: #ccc;
+}
+
+.footer-bottom {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* 🌙 Dark Mode */
+body[data-theme="dark"] .footer {
+  background: #1c1c1c;
+  color: #e1e1e1;
+  border-top: 1px solid #333;
+}
+
+body[data-theme="dark"] .footer-description,
+body[data-theme="dark"] .footer-links li,
+body[data-theme="dark"] .footer-contact li,
+body[data-theme="dark"] .footer-bottom {
+  color: #aaa;
+}
+
+body[data-theme="dark"] .footer-links h3,
+body[data-theme="dark"] .footer-contact h3 {
+  color: #fff;
+}
+
+body[data-theme="dark"] .footer hr {
+  background: #444;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    text-align: center;
+  }
+
+  .footer-logo-section,
+  .footer-links,
+  .footer-contact {
+    align-items: center;
+  }
+
+  .footer-icons img {
+    margin-right: 10px;
+  }
+}
